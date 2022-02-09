@@ -1,0 +1,4 @@
+
+public class FzBike extends Bike,MotorBike{
+
+}

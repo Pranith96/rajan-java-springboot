@@ -1,0 +1,8 @@
+
+public class Addition {
+
+	public Addition() {
+		System.out.println("In Addition");
+	}
+	
+}

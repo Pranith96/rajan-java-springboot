@@ -1,0 +1,10 @@
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+
+		Addition ad = new Addition();
+		System.out.println(ad);
+	}
+
+}

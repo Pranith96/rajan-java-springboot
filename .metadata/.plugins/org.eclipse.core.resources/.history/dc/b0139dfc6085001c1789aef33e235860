@@ -1,0 +1,11 @@
+
+public class Demo1 {
+
+	public void hello() {
+		System.out.println("hello");
+	}
+	
+	public static void hi() {
+		System.out.println("Hi");
+	}
+}

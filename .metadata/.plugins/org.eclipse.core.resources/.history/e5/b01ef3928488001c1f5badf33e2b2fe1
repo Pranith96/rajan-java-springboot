@@ -1,0 +1,7 @@
+
+public class Bike {
+
+	public void engine() {
+		System.out.println("Engine");
+	}
+}

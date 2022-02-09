@@ -1,0 +1,11 @@
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		MotorBike bike = new MotorBike();
+		bike.breaks();
+		bike.engine();
+		bike.mirror();
+		bike.petrolTank();
+	}
+}

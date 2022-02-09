@@ -1,0 +1,11 @@
+
+public class MotorBike {
+
+	public void petrolTank() {
+		System.out.println("petrol tank");
+	}
+	
+	public void mirror() {
+		System.out.println("Mirror");
+	}
+}
