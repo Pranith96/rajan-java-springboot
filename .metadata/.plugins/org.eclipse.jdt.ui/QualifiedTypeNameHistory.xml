@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="Summation"/>
     <fullyQualifiedTypeName name="BikeImpl"/>
+    <fullyQualifiedTypeName name="Addition"/>
+    <fullyQualifiedTypeName name="MotorBike"/>
 </qualifiedTypeNameHistroy>
