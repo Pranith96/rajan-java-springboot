@@ -4,4 +4,9 @@
     <fullyQualifiedTypeName name="BikeImpl"/>
     <fullyQualifiedTypeName name="Addition"/>
     <fullyQualifiedTypeName name="MotorBike"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="CustomCompileTimeException"/>
+    <fullyQualifiedTypeName name="CustomeRuntimeException"/>
 </qualifiedTypeNameHistroy>
