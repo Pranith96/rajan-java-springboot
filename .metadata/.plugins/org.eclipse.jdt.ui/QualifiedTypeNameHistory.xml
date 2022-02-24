@@ -9,4 +9,8 @@
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="CustomCompileTimeException"/>
     <fullyQualifiedTypeName name="CustomeRuntimeException"/>
+    <fullyQualifiedTypeName name="com.example.accessmodifers.Calculator"/>
+    <fullyQualifiedTypeName name="in.example.accessmodifiers.Addition"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
