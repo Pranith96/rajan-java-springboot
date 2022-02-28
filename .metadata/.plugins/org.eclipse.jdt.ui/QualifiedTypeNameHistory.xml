@@ -13,4 +13,7 @@
     <fullyQualifiedTypeName name="in.example.accessmodifiers.Addition"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ThreadExample1"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="ThreadExample2"/>
 </qualifiedTypeNameHistroy>
