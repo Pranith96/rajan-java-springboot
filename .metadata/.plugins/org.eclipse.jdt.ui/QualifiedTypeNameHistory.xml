@@ -16,4 +16,7 @@
     <fullyQualifiedTypeName name="ThreadExample1"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="ThreadExample2"/>
+    <fullyQualifiedTypeName name="com.method.Resourse"/>
+    <fullyQualifiedTypeName name="com.method.Thread1"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.parsers.CachingParserPool.SynchronizedGrammarPool"/>
 </qualifiedTypeNameHistroy>
