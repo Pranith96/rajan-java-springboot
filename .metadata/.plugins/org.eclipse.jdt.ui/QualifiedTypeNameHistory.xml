@@ -11,12 +11,13 @@
     <fullyQualifiedTypeName name="CustomeRuntimeException"/>
     <fullyQualifiedTypeName name="com.example.accessmodifers.Calculator"/>
     <fullyQualifiedTypeName name="in.example.accessmodifiers.Addition"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="ThreadExample1"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="ThreadExample2"/>
     <fullyQualifiedTypeName name="com.method.Resourse"/>
     <fullyQualifiedTypeName name="com.method.Thread1"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.parsers.CachingParserPool.SynchronizedGrammarPool"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>
