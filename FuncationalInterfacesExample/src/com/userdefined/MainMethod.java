@@ -8,6 +8,8 @@ public class MainMethod {
 
 		Bike bike = () -> System.out.println("engine");
 		bike.engine();
+		Bike.hello();
+		bike.hi();
 
 		Addition ad = (a, b, c) -> {
 			int d = a + b;
