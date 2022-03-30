@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.student.entity.Student;
@@ -33,9 +34,28 @@ public class StudentController {
 		List<Student> response = studentService.getStudentList();
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
-	
+
 	@GetMapping("/get/{studentId}")
 	public ResponseEntity<Student> getStudent(@PathVariable("studentId") Integer studentId) {
+		Student response = studentService.getStudentData(studentId);
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
+
+	@GetMapping("/get/details/{studentName}")
+	public ResponseEntity<List<Student>> getStudentByName(@PathVariable("studentName") String studentName) {
+		List<Student> response = studentService.getStudentDetailsByName(studentName);
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
+
+	@GetMapping("/get/login/{loginId}/{password}")
+	public ResponseEntity<Student> loginStudent(@PathVariable("loginId") String loginId,
+			@PathVariable("password") String password) {
+		Student response = studentService.loginStudent(loginId,password);
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
+	
+	@GetMapping("/get/by/id")
+	public ResponseEntity<Student> getStudentById(@RequestParam("studentId") Integer studentId) {
 		Student response = studentService.getStudentData(studentId);
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}

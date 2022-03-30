@@ -41,4 +41,24 @@ public class StudentServiceImpl implements StudentService {
 		}
 		return response.get();
 	}
+
+	@Override
+	public List<Student> getStudentDetailsByName(String studentName) {
+		//List<Student> response = studentRepository.findByStudentName(studentName);
+		List<Student> response = studentRepository.getDetailsByName(studentName);
+		if (response == null) {
+			throw new RuntimeException("Data is Empty");
+		}
+
+		return response;
+	}
+
+	@Override
+	public Student loginStudent(String loginId, String password) {
+		Optional<Student> response = studentRepository.findByLoginIdAndPassword(loginId, password);
+		if (!response.isPresent()) {
+			throw new RuntimeException("Data is InCorrect");
+		}
+		return response.get();
+	}
 }
