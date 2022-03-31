@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -22,5 +23,9 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 	@Query(value = "select * from student_table where student_name=:studentName", nativeQuery = true)
 	List<Student> getDetailsByName(String studentName);
+
+	@Modifying
+	@Query("update Student s set s.studentName=:studentName where s.studentId=:studentId")
+	void updateStudentName(String studentName, Integer studentId);
 
 }

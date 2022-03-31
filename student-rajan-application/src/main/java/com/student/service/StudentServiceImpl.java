@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.student.entity.Student;
 import com.student.repository.StudentRepository;
@@ -44,7 +45,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public List<Student> getStudentDetailsByName(String studentName) {
-		//List<Student> response = studentRepository.findByStudentName(studentName);
+		// List<Student> response = studentRepository.findByStudentName(studentName);
 		List<Student> response = studentRepository.getDetailsByName(studentName);
 		if (response == null) {
 			throw new RuntimeException("Data is Empty");
@@ -61,4 +62,45 @@ public class StudentServiceImpl implements StudentService {
 		}
 		return response.get();
 	}
+
+	@Override
+	public String updateDetails(Student student) {
+		Student response = getStudentData(student.getStudentId());
+
+		if (student.getStudentName() != null && !student.getStudentName().isBlank()) {
+			response.setStudentName(student.getStudentName());
+		}
+		if (student.getEmail() != null && !student.getEmail().isBlank()) {
+			response.setEmail(student.getEmail());
+		}
+		if (student.getMobileNumber() != null && !student.getMobileNumber().isBlank()) {
+			response.setMobileNumber(student.getMobileNumber());
+		}
+		if (student.getLoginId() != null && !student.getLoginId().isBlank()) {
+			response.setLoginId(student.getLoginId());
+		}
+		if (student.getPassword() != null && !student.getPassword().isBlank()) {
+			response.setPassword(student.getPassword());
+		}
+		studentRepository.save(response);
+		return "updated successfully";
+	}
+
+	@Transactional
+	@Override
+	public String updateStudentByName(String studentName, Integer studentId) {
+		studentRepository.updateStudentName(studentName, studentId);
+		return "Updated Name Successfully";
+	}
+
+	@Override
+	public String deleteStudentData(Integer studentId) {
+		Student response = getStudentData(studentId);
+		if (response != null) {
+			// studentRepository.deleteById(studentId);
+			studentRepository.delete(response);
+		}
+		return "deleted successfuly";
+	}
+
 }
