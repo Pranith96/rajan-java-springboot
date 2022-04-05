@@ -21,7 +21,7 @@ public class Student {
 	private String mobileNumber;
 	@Column(name = "email_id")
 	private String email;
-	@Column(name = "login_id", unique = true)
+	@Column(name = "login_id", unique = true,nullable = false)
 	private String loginId;
 	@Column(name = "password")
 	private String password;
