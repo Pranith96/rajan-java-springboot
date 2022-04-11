@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.student.entity.Status;
 import com.student.entity.Student;
 import com.student.exceptions.StudentNotFoundException;
 import com.student.repository.StudentRepository;
@@ -23,6 +24,8 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public String saveStudent(Student student) {
+		student.getAddress().setStudent(student);
+		student.setStatus(Status.ACTIVE);
 		Student response = studentRepository.save(student);
 		if (response == null) {
 			return "data not saved";

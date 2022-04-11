@@ -23,7 +23,7 @@ import com.student.service.StudentService;
 @RestController
 public class StudentController {
 
-	@Qualifier(value = "service1")
+	//@Qualifier(value = "service1")
 	@Autowired
 	StudentService studentService;
 
